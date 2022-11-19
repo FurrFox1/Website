@@ -1,4 +1,5 @@
 /*INDEX*/
+@import "../base/media-query";
 
 .mainindex{
     font-family: 'Secular One', sans-serif;
@@ -160,6 +161,89 @@
         background: rgb(0,102,145);
         background: linear-gradient(180deg, rgba(0,102,145,0.4) 0%, rgba(0,0,0,0.65) 50%, rgba(0,102,145,0.4) 100%);
         h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ejemplos_contenedor{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) ;
+            grid-template-rows: 1fr 1fr ;
+            grid-template-areas: 
+            "dibujo1 dibujo2 dibujo3 dibujo4"
+            "dibujo1 dibujo5 dibujo6 dibujo4";
+            @include media-up(lg){
+                grid-template-columns: repeat(2, 1fr) ;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                "dibujo2 dibujo3"
+                "dibujo5 dibujo6"
+                "dibujo1 dibujo4"
+                "dibujo1 dibujo4"
+            }
+            @include media-up(sm){
+                grid-template-columns: 1fr ;
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas:
+                "dibujo2"
+                "dibujo3"
+                "dibujo5"
+                "dibujo6"
+                "dibujo1"
+                "dibujo4"
+                }
+            }
+        }
+        .ejemplos_contenedor{
+            .dibujo1{
+                grid-area: dibujo1;
+            }
+            .dibujo2{
+                grid-area: dibujo2;
+            }
+            .dibujo3{
+                grid-area: dibujo3;
+            }
+            .dibujo4{
+                grid-area: dibujo4;
+            }
+            .dibujo5{
+                grid-area: dibujo5;
+            }
+            .dibujo6{
+                grid-area: dibujo6;
+            }
+        }
+        .ejemplos_contenedor{
+            div{
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+}
+
+
+
+
+ /**.mainexamples{
+    display: flex;
+    justify-content: center;
+    .ejemplos{
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        width: 80%;
+        background: rgb(0,102,145);
+        background: linear-gradient(180deg, rgba(0,102,145,0.4) 0%, rgba(0,0,0,0.65) 50%, rgba(0,102,145,0.4) 100%);
+        h2{
             text-align: center;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -245,7 +329,7 @@
             }
         }
     }
-}
+}*/
 
 /*TOS*/
 .maintos{

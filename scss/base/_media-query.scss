@@ -1,34 +1,15 @@
-@media screen and (max-width: 800px) {
-    .ejemplos_contenedor{
-        grid-template-columns: repeat(2, 1fr) ;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-        "dibujo2 dibujo3"
-        "dibujo5 dibujo6"
-        "dibujo1 dibujo4"
-        "dibujo1 dibujo4"
-    }
-    .reflist{
-        flex-direction: column;
-        align-items: center;
-    }
-    .reflist_info_price{
-        flex-direction: row;
+$breakpoints:(
+    sm:500px,
+    lg:800px,
+);
+
+@mixin media-up ($breakpoint) {
+    @media screen and(max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
     }
 }
 
 @media screen and (max-width: 500px){
-    .ejemplos_contenedor{
-        grid-template-columns: 1fr ;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas:
-        "dibujo2"
-        "dibujo3"
-        "dibujo5"
-        "dibujo6"
-        "dibujo1"
-        "dibujo4"
-    }
     .navbar{
         flex-direction: column;
         text-align: center;
@@ -46,4 +27,19 @@
         display: flex;
     }
 
+}
+@media screen and (max-width: 590px){
+    .extras{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 820px){
+    .reflist{
+        flex-direction: column;
+        align-items: center;
+    }
+    .reflist_info_price{
+        flex-direction: row;
+    }
 }

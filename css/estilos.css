@@ -141,6 +141,32 @@ header nav {
           text-decoration: none; }
 
 /*INDEX*/
+@media screen and (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center; }
+  .navbar li {
+    text-align: center;
+    width: 100%; }
+  .footer {
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: center; }
+  .footer_contactme ul {
+    display: flex; } }
+
+@media screen and (max-width: 590px) {
+  .extras {
+    flex-direction: column;
+    text-align: center; } }
+
+@media screen and (max-width: 820px) {
+  .reflist {
+    flex-direction: column;
+    align-items: center; }
+  .reflist_info_price {
+    flex-direction: row; } }
+
 .mainindex {
   font-family: 'Secular One', sans-serif;
   display: flex;
@@ -264,6 +290,7 @@ header nav {
     background: #006691;
     background: linear-gradient(180deg, rgba(0, 102, 145, 0.4) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 102, 145, 0.4) 100%); }
     .mainexamples .ejemplos h2 {
+      color: white;
       text-align: center;
       margin-top: 10px;
       margin-bottom: 10px; }
@@ -273,61 +300,132 @@ header nav {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr 1fr;
       grid-template-areas: "dibujo1 dibujo2 dibujo3 dibujo4" "dibujo1 dibujo5 dibujo6 dibujo4"; }
-      .mainexamples .ejemplos .ejemplos_contenedor .dibujo1 {
-        grid-area: dibujo1; }
-        .mainexamples .ejemplos .ejemplos_contenedor .dibujo1 .dibujo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s; }
-          .mainexamples .ejemplos .ejemplos_contenedor .dibujo1 .dibujo:hover {
-            transform: scale(1.1); }
-      .mainexamples .ejemplos .ejemplos_contenedor .dibujo2 {
-        grid-area: dibujo2; }
-        .mainexamples .ejemplos .ejemplos_contenedor .dibujo2 .dibujo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s; }
-          .mainexamples .ejemplos .ejemplos_contenedor .dibujo2 .dibujo:hover {
-            transform: scale(1.1); }
-      .mainexamples .ejemplos .ejemplos_contenedor .dibujo3 {
-        grid-area: dibujo3; }
-        .mainexamples .ejemplos .ejemplos_contenedor .dibujo3 .dibujo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s; }
-          .mainexamples .ejemplos .ejemplos_contenedor .dibujo3 .dibujo:hover {
-            transform: scale(1.1); }
-      .mainexamples .ejemplos .ejemplos_contenedor .dibujo4 {
-        grid-area: dibujo4; }
-        .mainexamples .ejemplos .ejemplos_contenedor .dibujo4 .dibujo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s; }
-          .mainexamples .ejemplos .ejemplos_contenedor .dibujo4 .dibujo:hover {
-            transform: scale(1.1); }
-      .mainexamples .ejemplos .ejemplos_contenedor .dibujo5 {
-        grid-area: dibujo5; }
-        .mainexamples .ejemplos .ejemplos_contenedor .dibujo5 .dibujo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s; }
-          .mainexamples .ejemplos .ejemplos_contenedor .dibujo5 .dibujo:hover {
-            transform: scale(1.1); }
-      .mainexamples .ejemplos .ejemplos_contenedor .dibujo6 {
-        grid-area: dibujo6; }
-        .mainexamples .ejemplos .ejemplos_contenedor .dibujo6 .dibujo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s; }
-          .mainexamples .ejemplos .ejemplos_contenedor .dibujo6 .dibujo:hover {
-            transform: scale(1.1); }
+      @media screen and (max-width: 800px) {
+        .mainexamples .ejemplos .ejemplos_contenedor {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          grid-template-areas: "dibujo2 dibujo3" "dibujo5 dibujo6" "dibujo1 dibujo4" "dibujo1 dibujo4"; } }
+      @media screen and (max-width: 500px) {
+        .mainexamples .ejemplos .ejemplos_contenedor {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(6, 1fr);
+          grid-template-areas: "dibujo2" "dibujo3" "dibujo5" "dibujo6" "dibujo1" "dibujo4"; } }
+  .mainexamples .ejemplos_contenedor .dibujo1 {
+    grid-area: dibujo1; }
+  .mainexamples .ejemplos_contenedor .dibujo2 {
+    grid-area: dibujo2; }
+  .mainexamples .ejemplos_contenedor .dibujo3 {
+    grid-area: dibujo3; }
+  .mainexamples .ejemplos_contenedor .dibujo4 {
+    grid-area: dibujo4; }
+  .mainexamples .ejemplos_contenedor .dibujo5 {
+    grid-area: dibujo5; }
+  .mainexamples .ejemplos_contenedor .dibujo6 {
+    grid-area: dibujo6; }
+  .mainexamples .ejemplos_contenedor div .dibujo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s; }
+    .mainexamples .ejemplos_contenedor div .dibujo:hover {
+      transform: scale(1.1); }
 
+/**.mainexamples{
+    display: flex;
+    justify-content: center;
+    .ejemplos{
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        width: 80%;
+        background: rgb(0,102,145);
+        background: linear-gradient(180deg, rgba(0,102,145,0.4) 0%, rgba(0,0,0,0.65) 50%, rgba(0,102,145,0.4) 100%);
+        h2{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ejemplos_contenedor{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) ;
+            grid-template-rows: 1fr 1fr ;
+            grid-template-areas: 
+            "dibujo1 dibujo2 dibujo3 dibujo4"
+            "dibujo1 dibujo5 dibujo6 dibujo4";
+            .dibujo1{
+                grid-area: dibujo1;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo2{
+                grid-area: dibujo2;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo3{
+                grid-area: dibujo3;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }        }
+            .dibujo4{
+                grid-area: dibujo4;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo5{
+                grid-area: dibujo5;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo6{
+                grid-area: dibujo6;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}*/
 /*TOS*/
 .maintos {
   display: flex;
@@ -389,22 +487,7 @@ footer {
         width: 30px;
         height: 30px; }
 
-@media screen and (max-width: 800px) {
-  .ejemplos_contenedor {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "dibujo2 dibujo3" "dibujo5 dibujo6" "dibujo1 dibujo4" "dibujo1 dibujo4"; }
-  .reflist {
-    flex-direction: column;
-    align-items: center; }
-  .reflist_info_price {
-    flex-direction: row; } }
-
 @media screen and (max-width: 500px) {
-  .ejemplos_contenedor {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "dibujo2" "dibujo3" "dibujo5" "dibujo6" "dibujo1" "dibujo4"; }
   .navbar {
     flex-direction: column;
     text-align: center; }
@@ -417,3 +500,15 @@ footer {
     align-items: center; }
   .footer_contactme ul {
     display: flex; } }
+
+@media screen and (max-width: 590px) {
+  .extras {
+    flex-direction: column;
+    text-align: center; } }
+
+@media screen and (max-width: 820px) {
+  .reflist {
+    flex-direction: column;
+    align-items: center; }
+  .reflist_info_price {
+    flex-direction: row; } }
