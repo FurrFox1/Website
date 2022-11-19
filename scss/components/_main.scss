@@ -1,0 +1,293 @@
+/*INDEX*/
+
+.mainindex{
+    font-family: 'Secular One', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    .general{
+        height: 100vh;
+        width: 50vh;
+        background: rgb(184,242,230);
+        background: linear-gradient(180deg, rgba(184, 242, 230, 0.418) 8%, rgba(94,100,114,0.418) 34%);
+        .head{
+            text-align: center;
+            div{
+                .logoindex{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            h1{
+                background-color:#b8f2e67e;
+                color: #333333;
+                text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+            }
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            text-align: center;
+            ul{
+                width: 100%;
+                text-shadow: 3px 5px 2px #474747;
+                background-color:#00000062;
+                font-size: 25px;
+                margin-top: 10px;
+                transition: transform 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                a{
+                    text-decoration: none;
+                    color:  rgb(211, 211, 211);
+                }
+            }
+        }
+        .contactos{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            a{
+                img{
+                    height: 30px;
+                    width: 30px;
+                    padding-right: 5px;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        p{
+            font-size: 10px;
+            background-color: white;
+            text-align: center;
+        }
+    }
+}
+
+
+/*COMMISSION LIST*/
+.maincommissions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sectioncommissions{
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        width: 80%;
+        background: rgb(0,102,145);
+        background: linear-gradient(180deg, rgba(0,102,145,0.4) 0%, rgba(0,0,0,0.65) 50%, rgba(0,102,145,0.4) 100%);
+        .reflist{
+            margin-top: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            img{
+                width:350px;
+            }
+            .reflist_info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px;
+                background-color: #333333b9;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+                .reflist_info_price{
+                    color:white;
+                    h2{
+                        text-align: center;
+                        font-size: 30px;
+                        background-color: #0000004b;
+                    }
+                    ul{
+                        list-style: none;
+                        font-size: 35px;
+                    }
+                }
+                .reflist_info_addons{
+                    font-size: 10px;
+                    background-color: #0000004b;
+                    color: #888888;
+                }
+                
+            }
+        }
+        .extras{
+            margin-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content:center;
+            background-color: #33333342;
+            div{
+                padding: 10px;
+                h3{
+                    font-size: 30px;
+                }
+            }
+            .extras_ido{
+                h3{
+                    color: rgb(72, 223, 72);
+                }
+            }
+            .extras_iwont{
+                h3{
+                    color: rgb(255, 68, 68);
+                }
+            }
+        }
+    }
+}
+
+/*EXAMPLES*/
+.mainexamples{
+    display: flex;
+    justify-content: center;
+    .ejemplos{
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        width: 80%;
+        background: rgb(0,102,145);
+        background: linear-gradient(180deg, rgba(0,102,145,0.4) 0%, rgba(0,0,0,0.65) 50%, rgba(0,102,145,0.4) 100%);
+        h2{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ejemplos_contenedor{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) ;
+            grid-template-rows: 1fr 1fr ;
+            grid-template-areas: 
+            "dibujo1 dibujo2 dibujo3 dibujo4"
+            "dibujo1 dibujo5 dibujo6 dibujo4";
+            .dibujo1{
+                grid-area: dibujo1;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo2{
+                grid-area: dibujo2;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo3{
+                grid-area: dibujo3;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }        }
+            .dibujo4{
+                grid-area: dibujo4;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo5{
+                grid-area: dibujo5;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .dibujo6{
+                grid-area: dibujo6;
+                .dibujo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*TOS*/
+.maintos{
+    display: flex;
+    justify-content: center;
+    .tos{
+        color: white;
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        width: 80%;
+        background: rgb(0,102,145);
+        background: linear-gradient(180deg, rgba(0,102,145,0.4) 0%, rgba(0,0,0,0.65) 50%, rgba(0,102,145,0.4) 100%);
+        div{
+            margin: 10px;
+        }
+        .tos_header{
+            text-align: center;
+            h2{
+                color: white;
+                background-color: #000000c4;
+            }
+        }
+        .tos_main{
+            .tos_main_rules{
+                h3{
+                    text-align: center;
+                    margin: 5px;
+                    color: rgb(197, 197, 197);
+                    background-color: #000000c4;
+                }
+                p{
+                    span{
+                        color:rgb(255, 55, 55)
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

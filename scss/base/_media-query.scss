@@ -1,0 +1,49 @@
+@media screen and (max-width: 800px) {
+    .ejemplos_contenedor{
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "dibujo2 dibujo3"
+        "dibujo5 dibujo6"
+        "dibujo1 dibujo4"
+        "dibujo1 dibujo4"
+    }
+    .reflist{
+        flex-direction: column;
+        align-items: center;
+    }
+    .reflist_info_price{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .ejemplos_contenedor{
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "dibujo2"
+        "dibujo3"
+        "dibujo5"
+        "dibujo6"
+        "dibujo1"
+        "dibujo4"
+    }
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar li{
+        text-align: center;
+        width: 100%;
+    }
+    .footer{
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_contactme ul{
+        display: flex;
+    }
+
+}
